@@ -32,7 +32,7 @@ def solve(array, discount):
         #print array_s[:l-l//3]
         total = sum(array_s[l-l//3:])*(100-float(discount))/100 + sum(array_s[:l-l//3])
         #total =1
-        print total
+        #print total
     else:
         #total = 1
         total = sum(array)
