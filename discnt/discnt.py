@@ -21,14 +21,21 @@ def read_input(filename):
 
 
 def solve(array, discount):
-    array_s = mergesort(array)
 
-    l = len(array_s)
-    #print array_s[l-l//3:]
-    #print (1-discount/100)
-    #print array_s[:l-l//3]
-    total = sum(array_s[l-l//3:])*(100-discount)/100 + sum(array_s[:l-l//3])
-    #print total
+    if len(array)>1:
+        array_s = mergesort(array)
+        l = len(array_s)
+        #print l
+        #print array_s[l-l//3:]
+        #print discount
+        #print float((100-discount)/100)
+        #print array_s[:l-l//3]
+        total = sum(array_s[l-l//3:])*(100-float(discount))/100 + sum(array_s[:l-l//3])
+        #total =1
+        print total
+    else:
+        #total = 1
+        total = sum(array)
     return total
 
 def mergesort(array):
