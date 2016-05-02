@@ -7,7 +7,7 @@ def main():
 
     #print read_input(input_filename)
     X, N, C, G = read_input(input_filename)
-    result =  solve (X, C, G, N, max=N)
+    result =  solve (X, C, G, N, max=N+1)
     #array, discount = read_input(input_filename)
     #total = solve(array, discount)
     write_output(output_filename, result)
