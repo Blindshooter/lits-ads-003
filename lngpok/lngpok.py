@@ -30,8 +30,10 @@ def csort(a, min, max):
 
 
 def solve(a):
+    if sum(a)==0:
+        return len(a)
     #print(a)
-    w, j = csort(a, min(a), max(a))
+    w, j = csort(a, 0, max(a))
     #print(w,j)
     w1 = [w[i+1]-w[i]-1 for i in xrange(len(w)-1)]+[j+1]
     #print(w1, len(w1))
